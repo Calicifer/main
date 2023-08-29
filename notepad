@@ -1,0 +1,10 @@
+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
+
+
+@app.route('/rephraser', methods=['GET', 'POST'])
+def rephraser():
+    if request.method == 'POST':
+        text = request.form['text']
+        number_of_inputs = int(request.form['number_of_inputs'])
+        return render_template('result.html', text=text, number_of_inputs=number_of_inputs)
+    return render_template('index.html')

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Section Content - Result</title>
+</head>
+<body>
+    <h1>Generated Section Content - Result</h1>
+    <ul>
+        {% for section_name, title, description, section_content in generated_sections %}
+        <li>
+            <h2>{{ section_name }}</h2>
+            <p><strong>Title:</strong> {{ title }}</p>
+            <p><strong>Description:</strong> {{ description }}</p>
+            <p>{{ section_content }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ request.headers.get('referer') }}">Back to Input</a></p>
+</body>
+</html>
+
+
+
+
