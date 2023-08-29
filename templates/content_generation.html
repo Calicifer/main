@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Business Description</title>
+</head>
+<body>
+    <h1>User Business Description</h1>
+    <form id="generate-form" action="/content_generator" method="post">
+        <div class="section">
+            <h2>About</h2>
+            <label for="about_title">Title:</label><br>
+            <input type="text" id="about_title" name="about_title"><br><br>
+        
+            <label for="about_description">Description:</label><br>
+            <input type="text" id="about_description" name="about_description"><br><br>
+        </div>
+        
+        <div class="section">
+            <h2>Refunds</h2>
+            <label for="refunds_title">Title:</label><br>
+            <input type="text" id="refunds_title" name="refunds_title"><br><br>
+        
+            <label for="refunds_description">Description:</label><br>
+            <input type="text" id="refunds_description" name="refunds_description"><br><br>
+        </div>
+        
+        <div class="section">
+            <h2>Hero</h2>
+            <label for="hero_title">Title:</label><br>
+            <input type="text" id="hero_title" name="hero_title"><br><br>
+        
+            <label for="hero_subtitle">Subtitle:</label><br>
+            <input type="text" id="hero_subtitle" name="hero_subtitle"><br><br>
+        </div>
+
+        <button type="submit">Generate Sections</button>
+    </form>
+</body>
+</html>

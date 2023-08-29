@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter New Data</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter New Data</title>
+</head>
+<body>
+    <h1>Enter New Data</h1>
+<form id="data-form">
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description"><br>
+
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount"><br><br>
+
+    <button type="button" onclick="submitData()">Submit</button>
+</form>
+
+    <div id="response"></div>
+
+<script>
+    function submitData() {
+        var description = document.getElementById("description").value;
+        var amount = document.getElementById("amount").value;
+        var data = { description: description, amount: amount };
+
+        fetch('/response', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("response").innerText = result.message;
+            console.log(result.ai_response);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
