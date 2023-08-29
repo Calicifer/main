@@ -1,11 +1,12 @@
 from flask import Flask, jsonify, request, render_template
+import os
 import openai
 import concurrent.futures
 from utils import auth_required
 
 app = Flask(__name__)
 # Set your OpenAI API key here
-openai.api_key = "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"
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # Custom error handlers
 @app.errorhandler(400)
